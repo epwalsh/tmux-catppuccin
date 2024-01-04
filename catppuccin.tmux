@@ -318,7 +318,7 @@ main() {
   local status_modules_left=$(get_tmux_option "@catppuccin_status_modules_left" "")
   local loaded_modules_left=$( load_modules "$status_modules_left")
 
-  set status-left "$loaded_modules_left"
+  set status-left "#{pomodoro_status} $loaded_modules_left"
   set status-right "$loaded_modules_right"
 
   # --------=== Modes
